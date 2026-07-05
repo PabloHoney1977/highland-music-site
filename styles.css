@@ -1,0 +1,166 @@
+:root {
+  --bg: #0f1115;
+  --bg-soft: #161a21;
+  --card: #1b2029;
+  --border: #272d38;
+  --fg: #e8ecf3;
+  --fg-dim: #a4adbd;
+  --accent: #4ecdc4;
+  --accent-2: #74c0fc;
+  --gold: #ffd43b;
+  --max: 960px;
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fa;
+    --bg-soft: #ffffff;
+    --card: #ffffff;
+    --border: #e4e8ef;
+    --fg: #1a1f28;
+    --fg-dim: #5a6473;
+    --accent: #1aa89e;
+    --accent-2: #2f7fd6;
+    --gold: #b98700;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-soft);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(160%) blur(8px);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--fg);
+}
+.brand:hover { text-decoration: none; }
+.brand .mark {
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid; place-items: center;
+  font-size: 17px;
+}
+.nav a { color: var(--fg-dim); margin-left: 22px; font-size: 0.95rem; font-weight: 500; }
+.nav a:hover { color: var(--fg); text-decoration: none; }
+
+/* Hero */
+.hero { padding: 72px 0 48px; text-align: center; }
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.hero p { font-size: 1.15rem; color: var(--fg-dim); max-width: 620px; margin: 0 auto; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+/* Section */
+section { padding: 40px 0; }
+h2 { font-size: 1.5rem; letter-spacing: -0.01em; margin: 0 0 8px; }
+.section-sub { color: var(--fg-dim); margin: 0 0 28px; }
+
+/* App cards */
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-card .icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+.app-card h3 { margin: 0; font-size: 1.15rem; }
+.app-card p { margin: 0; color: var(--fg-dim); font-size: 0.95rem; flex: 1; }
+.badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* Contact strip */
+.contact {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  margin: 8px 0 12px;
+}
+.contact a { font-weight: 600; }
+
+/* Content pages */
+.page { padding: 48px 0 24px; }
+.page h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+.page .updated { color: var(--fg-dim); font-size: 0.9rem; margin-bottom: 28px; }
+.page h2 { font-size: 1.2rem; margin: 30px 0 8px; }
+.page p, .page li { color: var(--fg); }
+.page ul { padding-left: 20px; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+  padding: 28px 0 40px;
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+}
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+.site-footer .legal { max-width: 520px; }
+.site-footer .legal strong { color: var(--fg); }
+.site-footer nav a { color: var(--fg-dim); margin-right: 18px; }
