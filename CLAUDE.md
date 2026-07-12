@@ -12,8 +12,9 @@ Each app has its own repo with its own `CLAUDE.md` for app-specific architecture
 - **Jazz Guitar Lab** — `pablohoney1977/jazz-guitar-app`. Freemium iOS app, jazz guitar harmony trainer. Furthest along — see its own CLAUDE.md for full status.
 - **Piano Chords Lab** — repo not yet created/added to this session.
 - **Note Quest** — repo not yet created/added to this session.
+- **Bagpipe Lab** (working name) — repo not yet created. Bagpipe/practice-chanter learning app: interactive animated chanter, rhythm-driven play-along loop (not pitch-matching — chanter fingering is deterministic), embellishments introduced right after basic rhythm is solid, framed via the functional reason pipers actually need them (no tonguing on a chanter — grace notes are the only way to separate repeated notes). Full curriculum/monetization/differentiation writeup in `bagpipe-app-strategy.md` in this repo.
 
-All three ship under bundle IDs on the `com.pablohoney.*` namespace, single-file React PWA + Capacitor pattern, Codemagic CI/CD, no Mac required.
+All four ship (or are planned to ship) under bundle IDs on the `com.pablohoney.*` namespace, single-file React PWA + Capacitor pattern, Codemagic CI/CD, no Mac required.
 
 ## Business / Legal Status
 > Not legal advice — confirm specifics with a small-business/IP attorney or CPA.
@@ -58,4 +59,5 @@ Track each app's progress through this list in that app's own CLAUDE.md; this is
 > Rolling snapshot, overwrite don't append. Last updated: 2026-07-12.
 
 - **Repo created (2026-07-12):** this file added to the existing `highland-music-site` repo (rather than spinning up a new `highland-music-ops` repo — GitHub App integration for this session isn't authorized to create new repos, 403; reusing the site repo avoided that and keeps one fewer repo to manage) to serve double duty as the LLC's public site + the portfolio ops/memory hub. Seeded from Jazz Guitar Lab's CLAUDE.md — cross-checked details (Apple Individual→Org status, D-U-N-S gate, domain/site live status, shared IAP/analytics vendor choices, the two portable iOS gotchas) as of that app's 2026-07-10/07-05 checkpoints. Piano Chords Lab and Note Quest repos don't exist yet in this session — add them here once created so this file can track all three.
+- **Bagpipe Lab concept added (2026-07-12):** fourth planned app, strategy captured in `bagpipe-app-strategy.md`. Curriculum built around a piping-specific fact (no tonguing on a chanter → grace-note embellishments are functionally required to separate repeated notes, not just decoration) and a product differentiator (chanter fingering is deterministic, so gameplay should grade rhythm/finger-sequence timing rather than pitch, unlike this portfolio's other pitch-matching apps). No repo yet — same pre-repo state as Piano Chords Lab/Note Quest; open questions (practice chanter vs. full pipes, audio source, mic-based rhythm input, tune repertoire/copyright) listed at the bottom of the strategy doc.
 - **Next concrete step:** Porkbun email forwarding for `support@highlandmusicapps.com`, then Porkbun registrant Org field, then D-U-N-S application — all gating the Apple Individual→Organization conversion for Jazz Guitar Lab's first submission.
