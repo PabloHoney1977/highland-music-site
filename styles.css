@@ -121,6 +121,8 @@ h2 { font-size: 1.5rem; letter-spacing: -0.01em; margin: 0 0 8px; }
 }
 .app-card h3 { margin: 0; font-size: 1.15rem; }
 .app-card p { margin: 0; color: var(--fg-dim); font-size: 0.95rem; flex: 1; }
+.badge-soon { color: var(--fg-dim); opacity: 0.85; }
+
 .app-link {
   align-self: flex-start;
   font-weight: 600;
